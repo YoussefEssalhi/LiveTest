@@ -1,0 +1,73 @@
+<!--
+<Design System li Khadamt Elih>
++------------------------+
+| IP Address: [__]       |
+| [
+Check IP]             |
++------------------------+
+
++--------------------------+
+| --- Results : ---------- |
+| Score: 85 ( Good )       |
+| VPN: No                  |
+| Proxy: Yes               |
+| Blacklist: No            |
+| Tor Browser : No         |
+| IP Type : Residential    |
+| ...                      |
++--------------------------+
+[ </Coding By Youssef-Es>  ]
+------------------------ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP-Analyzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <div id="user-ip">
+        <i id="ip_icon" class="fa-solid fa-location-dot"></i>
+        <p id="ip">Getting IP Address...</p>
+        <button type="button" class="copy_btn" onclick="CopyIP()">
+            <i class="fa-solid fa-clone"></i>
+        </button>
+    </div>
+    <div class="container">
+        <div class="score_title">
+            <p>[ Score ]</p>
+            <p id="ip_type" class="ip_type">Scanning...</p>
+        </div>
+        <div class="score_bar">
+            <div id="score_text" class="score_per" per="0%"></div>
+        </div>
+        <div class="check_title">- Detection Checks <i class="fa-solid fa-user-secret"></i> :</div>
+        <div id="vpn_status" class="vpn_status"><i class="fa-solid fa-square"></i> Scanning...</div>
+        <div id="proxy_status" class="proxy_status"><i class="fa-solid fa-square"></i> Scanning...</div>
+        <div id="tor_status" class="tor_status"><i class="fa-solid fa-square"></i> Scanning...</div>
+        <div id="blacklist_status" class="blacklist_status"><i class="fa-solid fa-square"></i> Scanning...</div>
+        <div class="websites_behavior">Websites behavior based on IP</div>
+        <div id="websites_behavior" class="websites_status">
+            <p>Scanning...</p>
+            <i class="fa-solid fa-circle"></i>
+        </div>
+        <div class="websites_behavior">Social Media New Account Behavior based on IP</div>
+        <div id="social_media_status" class="websites_status">
+            <p>Scanning...</p>
+            <i class="fa-solid fa-circle"></i>
+        </div>
+        <div class="websites_behavior">
+            <p>Need More ?</p>
+            <p class="soon">coming soon ...</p>
+        </div>
+    </div>
+    <div class="footer">Coding With <i class="fa-solid fa-mug-hot"></i> By Youssef-Es</div>
+    <script src="main.js"></script>
+</body>
+</html>

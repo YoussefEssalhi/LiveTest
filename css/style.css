@@ -1,0 +1,229 @@
+:root
+{
+    --main-color: #3867d6;
+    --hover-color: #4b7bec;
+    --green-color: #20bf6b;
+    --yellow-color: #fff200;
+    --white: #ffffff;
+    --grey-color: #7f8c8d;
+    --light-grey-color: rgba(0,0,0,0.1);
+}
+body
+{
+    background-color: rgb(233, 233, 240);
+    font-family: "Sanchez", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #4A4A4A;
+}
+.container
+{
+    max-width: 50%;
+    margin: 5px auto;
+}
+
+/*-----------
+ -- IP Style --
+-------------*/
+
+#user-ip
+{
+    justify-content: center;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 30px auto 20px;
+}
+#ip_icon
+{
+    display: inline-block;
+    margin-left: 14px;
+}
+#ip
+{
+    margin-left: 5px;
+    display: inline-block;
+}
+.copy_btn
+{
+    background-color: var(--main-color);
+    display: inline-block;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 15px;
+    margin-right: 14px;
+}
+.copy_btn:hover
+{
+    background-color: var(--hover-color);
+}
+/* .copy_btn::before
+{
+    content: "Copied";
+    position: absolute;
+    top: 1px;
+    background: var(--main-color);
+    padding: 5px;
+    border-radius: 5px;
+} */
+
+/*---------------
+ -- Score Style --
+----------------*/
+
+.score_title
+{   
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.score_title p
+{
+    margin: 10px 0;
+    padding: 0;
+}
+.ip_type
+{
+    text-transform: capitalize;
+    color: var(--grey-color);
+}
+.score_bar
+{
+    height: 10px;
+    background-color: var(--light-grey-color);
+    border-radius: 3px;
+}
+.score_per
+{
+    max-width: 0%;
+    height: 10px;
+    background-color: var(--yellow-color);
+    border-radius: 3px;
+    position: relative;
+    animation: ScoreBar 3s 1;
+}
+.score_per::before
+{
+    content: attr(per);
+    position: absolute;
+    background-color: var(--main-color);
+    color: white;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 15px;
+    top: 17px;
+    right: 0;
+    transform: translateX(50%);
+}
+.score_per::after
+{
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: var(--main-color);
+    top: 15px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+    z-index: -1;
+}
+
+@keyframes ScoreBar{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+/*----------------
+ -- Checks Style --
+-----------------*/
+.check_title
+{
+    margin-top: 33px;
+    font-weight: bold;
+}
+.vpn_status
+{
+    margin: 10px 0;
+    color: var(--grey-color);
+}
+.proxy_status
+{
+    color: var(--grey-color);
+}
+.tor_status
+{
+    margin: 10px 0;
+    color: var(--grey-color);
+}
+.blacklist_status
+{
+    color: var(--grey-color);
+}
+
+.websites_behavior
+{
+    margin: 15px 0 10px 0;
+    font-weight: bold;
+}
+
+.websites_status
+{
+    color: var(--grey-color);
+    text-transform: capitalize;
+    padding: 10px 15px;
+    width: fit-content;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: var(--light-grey-color);
+    /* background-color: #C6E8C5; */
+}
+.websites_status p
+{
+    margin: 0;
+    display: inline-block;
+}
+.websites_status i
+{
+    display: inline-block;
+}
+
+/*----------------
+ -- Tools Style --
+-----------------*/
+.soon
+{
+    text-transform: capitalize;
+    color: var(--grey-color);
+}
+
+.footer
+{
+    position: fixed;
+    bottom: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+/*----------------
+ -- Mobile Style --
+----------------*/
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .container
+    {
+        max-width: 90%;
+    }
+}
